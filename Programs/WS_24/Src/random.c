@@ -15,6 +15,7 @@
  */
  
 #include "random.h"
+#include "kniffel.h "
 #include <stdlib.h>
 #include <stdbool.h>
 

@@ -11,29 +11,29 @@
  * @version 1.0
  *
  * @date    22. Jan. 2025
- * @brief   Interface des Moduls zur Ausgabe der Würfel auf dem LCD Display. 
+ * @brief   Interface des Moduls zur Ausgabe der Wï¿½rfel auf dem LCD Display. 
  ******************************************************************************
  */
 #include "LCD_GUI.h"
 
-// Farben der Würfel
+// Farben der Wï¿½rfel
 #define DIE_COLOR_FIXED          MAGENTA
 #define DIE_COLOR_WIN            YELLOW
 #define DIE_COLOR_DEFAULT        GREEN     
 
 /**
-  * @brief Diese Funktion füllt den ganzen Bildschirm mit blau.
+  * @brief Diese Funktion fï¿½llt den ganzen Bildschirm mit blau.
   */
 void clearDisplay(void);
 
 /**
-  * @brief Diese Funktion zeichnet einen Würfel auf dem Bildschirm.
+  * @brief Diese Funktion zeichnet einen Wï¿½rfel auf dem Bildschirm.
   *
-  * @param  die Die Nummer des Würfels, die die Position auf dem Bildschirm 
-	*             festlegt. 0 ist der Würfel rechts außen. 4 ist der Würfel
-	*             links außen.
-	* @param  val Der Wert, der auf dem Würfel dargestellt wird.
-  * @param  c   Die Farbe des Würfels.
+  * @param  die Die Nummer des Wï¿½rfels, die die Position auf dem Bildschirm 
+	*             festlegt. 0 ist der Wï¿½rfel rechts auï¿½en. 4 ist der Wï¿½rfel
+	*             links auï¿½en.
+	* @param  val Der Wert, der auf dem Wï¿½rfel dargestellt wird.
+  * @param  c   Die Farbe des Wï¿½rfels.
   */
 void displayDie(uint8_t die, uint8_t value, COLOR c);
 

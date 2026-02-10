@@ -12,24 +12,28 @@
  * @version 1.0
  *
  * @date    20. Jan. 2025
- * @brief   Interface des Moduls zum Handling der Würfel.
+ * @brief   Interface des Moduls zum Handling der Wï¿½rfel.
  ******************************************************************************
  */
 
 #include <stdint.h>
 #include <stdbool.h>
 
+#define DIE_COUNT 5
+#define DIE_MAXVAL 6
+#define DIE_MINVAL 1
+
 /**
-  * @brief Diese Funktion liefert den aktuellen Wert eines Würfels.
+  * @brief Diese Funktion liefert den aktuellen Wert eines Wï¿½rfels.
   *
-  * @param  die Der Würfel, dessen Wert bestimmt wird.
+  * @param  die Der Wï¿½rfel, dessen Wert bestimmt wird.
   *	
-  * @retval Der Wert des Würfels.
+  * @retval Der Wert des Wï¿½rfels.
   */
 uint8_t getDie(uint8_t die);
 
 /**
-  * @brief Diese Funktion überprüft, ob alle Würfel den Wert 1 haben - also
+  * @brief Diese Funktion ï¿½berprï¿½ft, ob alle Wï¿½rfel den Wert 1 haben - also
 	*        ein Kniffel vorliegt.
   *
   * @retval true gdw. ein Kniffel liegt vor.
@@ -37,7 +41,7 @@ uint8_t getDie(uint8_t die);
 bool isKniffel(void);
 
 /**
-  * @brief Diese Funktion überprüft, ob die Werte der Würfel eine Strasse ergeben
+  * @brief Diese Funktion ï¿½berprï¿½ft, ob die Werte der Wï¿½rfel eine Strasse ergeben
   *        also eintweder 1 2 3 4 5 oder 2 3 4 5 6 sind.
   *
   * @retval true gdw. eine Strasse liegt vor.
@@ -45,31 +49,31 @@ bool isKniffel(void);
 bool isStreet(void);
 
 /**
-  * @brief Diese Funktion fixiert den Würfel mit der Nummer die. Ein fixierter
-	*        Würfel wird beim nächsten Wurf nicht geworfen / gewürfelt.
+  * @brief Diese Funktion fixiert den Wï¿½rfel mit der Nummer die. Ein fixierter
+	*        Wï¿½rfel wird beim nï¿½chsten Wurf nicht geworfen / gewï¿½rfelt.
   *
-  * @param  die Die Nummer des Würfels, der fixiert wird.
+  * @param  die Die Nummer des Wï¿½rfels, der fixiert wird.
   */
 void fixDie(uint8_t die);
 
 /**
-  * @brief Diese Funktion löst die Fixierung aller Würfel auf, so dass alle 
-	*        Würfel beim nächsten Wurf mit gewürfelt werden.
+  * @brief Diese Funktion lï¿½st die Fixierung aller Wï¿½rfel auf, so dass alle 
+	*        Wï¿½rfel beim nï¿½chsten Wurf mit gewï¿½rfelt werden.
   */
 void releaseDice(void);
 
 /**
-  * @brief Diese Funktion überprüft, ob der Würfel mit der Nummer die fixiert ist.
+  * @brief Diese Funktion ï¿½berprï¿½ft, ob der Wï¿½rfel mit der Nummer die fixiert ist.
   *
-  * @param  die Die Nummer des Würfels, der überprüft wird.
+  * @param  die Die Nummer des Wï¿½rfels, der ï¿½berprï¿½ft wird.
   *	
-  * @retval true gdw. der Würfel mit der Nummer die ist fixiert.
+  * @retval true gdw. der Wï¿½rfel mit der Nummer die ist fixiert.
   */
 bool isFixed(uint8_t die);
 
 /**
-  * @brief Diese Funktion würfelt die Würfel, die nicht fixiert sind. Somit
-	*        erhalten diese Würfel einen neuen Wert.
+  * @brief Diese Funktion wï¿½rfelt die Wï¿½rfel, die nicht fixiert sind. Somit
+	*        erhalten diese Wï¿½rfel einen neuen Wert.
   */
 void rollDice(void);
 

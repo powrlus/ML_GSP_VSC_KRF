@@ -28,8 +28,9 @@
 int main(void){
    // Initialisierung der HW
    initITSboard();
-	 GUI_init(DEFAULT_BRIGHTNESS);
-	
+	GUI_init(DEFAULT_BRIGHTNESS);
+	clearDisplay();
+   displayDie(2, 4, GREEN);
 #ifdef AUFGABE3
    testIO();
 #endif
