@@ -5,8 +5,8 @@
             "name": "STLink@pyOCD (launch)",
             "type": "gdbtarget",
             "request": "launch",
-            "cwd": "${workspaceFolder}/Programs/DrehgeberInterrupt",
-            "program": "out/DrehgeberInterrupt/ITSboard/Release/DrehgeberInterrupt.axf",
+            "cwd": "${workspaceFolder}/Programs/WS_24",
+            "program": "out/WS_24/ITSboard/Debug/WS_24.axf",
             "gdb": "arm-none-eabi-gdb",
             "preLaunchTask": "CMSIS Load",
             "initCommands": [
@@ -15,6 +15,8 @@
             ],
             "customResetCommands": [
                 "monitor reset halt",
+                "maintenance flush register-cache",
+                "maintenance flush dcache",
                 "tbreak main",
                 "continue"
             ],
@@ -37,20 +39,23 @@
             "cmsis": {
                 "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
                 "updateConfiguration": "auto"
-            }
+            },
+            "auxiliaryGdb": true
         },
         {
             "name": "STLink@pyOCD (attach)",
             "type": "gdbtarget",
             "request": "attach",
-            "cwd": "${workspaceFolder}/Programs/DrehgeberInterrupt",
-            "program": "out/DrehgeberInterrupt/ITSboard/Release/DrehgeberInterrupt.axf",
+            "cwd": "${workspaceFolder}/Programs/WS_24",
+            "program": "out/WS_24/ITSboard/Debug/WS_24.axf",
             "gdb": "arm-none-eabi-gdb",
             "initCommands": [
                 ""
             ],
             "customResetCommands": [
                 "monitor reset halt",
+                "maintenance flush register-cache",
+                "maintenance flush dcache",
                 "tbreak main",
                 "continue"
             ],
@@ -60,7 +65,8 @@
             "cmsis": {
                 "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
                 "updateConfiguration": "auto"
-            }
+            },
+            "auxiliaryGdb": true
         }
     ]
 }

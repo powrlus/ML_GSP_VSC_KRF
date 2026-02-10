@@ -1,0 +1,8 @@
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/database.dir
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard.dir
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard-build.dir
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard-configure.dir
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard-executes.dir
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard-database.dir
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/edit_cache.dir
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/rebuild_cache.dir
