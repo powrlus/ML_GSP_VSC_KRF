@@ -1,0 +1,159 @@
+\doxysection{Inc/display.h File Reference}
+\hypertarget{display_8h}{}\label{display_8h}\index{Inc/display.h@{Inc/display.h}}
+
+
+Header file of display module.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{display_8h_a2b00342dede324282512c2d2b17f58b8}{init\+Display}} (void)
+\item 
+void \mbox{\hyperlink{display_8h_a5dd355818a51f3a802cef75b3d0a99dd}{set\+Err\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{display_8h_aa977481486a9816d8ab1ce12a9a68034}{set\+Normal\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{display_8h_af0cca1eee630b9186ca4d09e95c7f734}{print\+Stdout}} (char \texorpdfstring{$\ast$}{*}msg)
+\item 
+void \mbox{\hyperlink{display_8h_acb9d00d18da3afe92a0c55f5b35ce52a}{print\+To\+Echo\+Line}} (char c)
+\item 
+void \mbox{\hyperlink{display_8h_ab5ba494b78d178684565f36d7948f8c3}{clear\+Echo\+Term}} (void)
+\item 
+void \mbox{\hyperlink{display_8h_a24d8dffd81e1a6297ea372b718bb15cd}{clear\+Stdout}} (void)
+\item 
+bool \mbox{\hyperlink{display_8h_a95002ad53098168472dcaaf34d2f01f9}{is\+Bottom\+Line}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of display module. 
+
+\begin{DoxyAuthor}{Author}
+Franz Korf, HAW Hamburg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Mar 2016 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{display_8h_source}{display.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{display_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{display_8h_ab5ba494b78d178684565f36d7948f8c3}\index{display.h@{display.h}!clearEchoTerm@{clearEchoTerm}}
+\index{clearEchoTerm@{clearEchoTerm}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{clearEchoTerm()}{clearEchoTerm()}}
+{\footnotesize\ttfamily \label{display_8h_ab5ba494b78d178684565f36d7948f8c3} 
+void clear\+Echo\+Term (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{display_8c_source_l00025}{25}} of file \mbox{\hyperlink{display_8c_source}{display.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{display_8c_source_l00033}{init\+Display()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{display_8h_a24d8dffd81e1a6297ea372b718bb15cd}\index{display.h@{display.h}!clearStdout@{clearStdout}}
+\index{clearStdout@{clearStdout}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{clearStdout()}{clearStdout()}}
+{\footnotesize\ttfamily \label{display_8h_a24d8dffd81e1a6297ea372b718bb15cd} 
+void clear\+Stdout (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{display_8c_source_l00021}{21}} of file \mbox{\hyperlink{display_8c_source}{display.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{display_8c_source_l00033}{init\+Display()}}.
+
+\Hypertarget{display_8h_a2b00342dede324282512c2d2b17f58b8}\index{display.h@{display.h}!initDisplay@{initDisplay}}
+\index{initDisplay@{initDisplay}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{initDisplay()}{initDisplay()}}
+{\footnotesize\ttfamily \label{display_8h_a2b00342dede324282512c2d2b17f58b8} 
+void init\+Display (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{display_8c_source_l00033}{33}} of file \mbox{\hyperlink{display_8c_source}{display.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00114}{main()}}.
+
+\Hypertarget{display_8h_a95002ad53098168472dcaaf34d2f01f9}\index{display.h@{display.h}!isBottomLine@{isBottomLine}}
+\index{isBottomLine@{isBottomLine}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{isBottomLine()}{isBottomLine()}}
+{\footnotesize\ttfamily \label{display_8h_a95002ad53098168472dcaaf34d2f01f9} 
+bool is\+Bottom\+Line (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{display_8c_source_l00065}{65}} of file \mbox{\hyperlink{display_8c_source}{display.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{display_8h_af0cca1eee630b9186ca4d09e95c7f734}\index{display.h@{display.h}!printStdout@{printStdout}}
+\index{printStdout@{printStdout}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{printStdout()}{printStdout()}}
+{\footnotesize\ttfamily \label{display_8h_af0cca1eee630b9186ca4d09e95c7f734} 
+void print\+Stdout (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{display_8c_source_l00029}{29}} of file \mbox{\hyperlink{display_8c_source}{display.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00024}{err\+Handler()}}, \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{arith__lib_8c_source_l00014}{print\+Number()}}.
+
+\Hypertarget{display_8h_acb9d00d18da3afe92a0c55f5b35ce52a}\index{display.h@{display.h}!printToEchoLine@{printToEchoLine}}
+\index{printToEchoLine@{printToEchoLine}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{printToEchoLine()}{printToEchoLine()}}
+{\footnotesize\ttfamily \label{display_8h_acb9d00d18da3afe92a0c55f5b35ce52a} 
+void print\+To\+Echo\+Line (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{display_8c_source_l00049}{49}} of file \mbox{\hyperlink{display_8c_source}{display.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{display_8h_a5dd355818a51f3a802cef75b3d0a99dd}\index{display.h@{display.h}!setErrMode@{setErrMode}}
+\index{setErrMode@{setErrMode}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{setErrMode()}{setErrMode()}}
+{\footnotesize\ttfamily \label{display_8h_a5dd355818a51f3a802cef75b3d0a99dd} 
+void set\+Err\+Mode (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{display_8c_source_l00055}{55}} of file \mbox{\hyperlink{display_8c_source}{display.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00024}{err\+Handler()}}.
+
+\Hypertarget{display_8h_aa977481486a9816d8ab1ce12a9a68034}\index{display.h@{display.h}!setNormalMode@{setNormalMode}}
+\index{setNormalMode@{setNormalMode}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{setNormalMode()}{setNormalMode()}}
+{\footnotesize\ttfamily \label{display_8h_aa977481486a9816d8ab1ce12a9a68034} 
+void set\+Normal\+Mode (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{display_8c_source_l00060}{60}} of file \mbox{\hyperlink{display_8c_source}{display.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00019}{clear\+System()}}, and \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+

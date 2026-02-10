@@ -1,0 +1,44 @@
+\doxysection{int\+\_\+stack.\+c}
+\hypertarget{int__stack_8c_source}{}\label{int__stack_8c_source}\index{Src/int\_stack.c@{Src/int\_stack.c}}
+\mbox{\hyperlink{int__stack_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00010}00010\ \ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{int__stack_8h}{int\_stack.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <errno.h>}}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00014}\mbox{\hyperlink{int__stack_8c_a43e26b4e9c4adc0eff402f1fac773833}{00014}}\ \textcolor{preprocessor}{\#define\ MAXANZELEMS\ \ \ \ 64\ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00016}\mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{00016}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ top\ ==\ 0:\ \ empty\ stack,\ }}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ top\ ==\ MAXANZELEMS:\ full\ stack}}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00020}\mbox{\hyperlink{int__stack_8c_a752e65d8915d16b3885b1b2d0992b279}{00020}}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{int__stack_8c_a752e65d8915d16b3885b1b2d0992b279}{stack}}[\mbox{\hyperlink{int__stack_8c_a43e26b4e9c4adc0eff402f1fac773833}{MAXANZELEMS}}];\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00022}\mbox{\hyperlink{int__stack_8c_a524d97c94164a24e4d4a8e09622788a5}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{int__stack_8c_a524d97c94164a24e4d4a8e09622788a5}{initStack}}\ (\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00023}00023\ \ \ \ \mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00026}\mbox{\hyperlink{int__stack_8c_ac9f4c8c5b58331248e5ca358cbd27ffd}{00026}}\ \textcolor{preprocessor}{\#define\ CHECK\_AND\_RETURN(cond,err)\ \{\ if\ (cond)\ \{\ errno\ =\ (err);\ return\ -\/1;\ \}\}}}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00028}\mbox{\hyperlink{int__stack_8c_a02a4ea9becef22d82d0b77fb01070bdd}{00028}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{int__stack_8c_a02a4ea9becef22d82d0b77fb01070bdd}{push}}(\textcolor{keywordtype}{int}\ value)\{}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00029}00029\ \ \ \ \mbox{\hyperlink{int__stack_8c_ac9f4c8c5b58331248e5ca358cbd27ffd}{CHECK\_AND\_RETURN}}((\mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}\ >=\ \mbox{\hyperlink{int__stack_8c_a43e26b4e9c4adc0eff402f1fac773833}{MAXANZELEMS}}),ERANGE)}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00030}00030\ \ \ \ \mbox{\hyperlink{int__stack_8c_a752e65d8915d16b3885b1b2d0992b279}{stack}}[\mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}++]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00031}00031\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00034}\mbox{\hyperlink{int__stack_8c_ad33e14d8616f2f1ba82202fd0fa3c107}{00034}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{int__stack_8c_ad33e14d8616f2f1ba82202fd0fa3c107}{pop}}(\textcolor{keywordtype}{int}\ *value)\{}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00035}00035\ \ \ \ \mbox{\hyperlink{int__stack_8c_ac9f4c8c5b58331248e5ca358cbd27ffd}{CHECK\_AND\_RETURN}}((\mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}\ <=\ 0),\ ERANGE)}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00036}00036\ \ \ \ *value\ =\ \mbox{\hyperlink{int__stack_8c_a752e65d8915d16b3885b1b2d0992b279}{stack}}[-\/-\/\mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}];}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00037}00037\ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00040}\mbox{\hyperlink{int__stack_8c_a591946cf8533dbe7722a89b3b2094071}{00040}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{int__stack_8c_a591946cf8533dbe7722a89b3b2094071}{elemAt}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ *value)\{}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{int__stack_8c_ac9f4c8c5b58331248e5ca358cbd27ffd}{CHECK\_AND\_RETURN}}((pos\ <\ 0),ERANGE)}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{int__stack_8c_ac9f4c8c5b58331248e5ca358cbd27ffd}{CHECK\_AND\_RETURN}}(\mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}\ -\/1\ -\/\ pos\ <\ 0,ERANGE)}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00043}00043\ \ \ \ \ *value\ =\ \mbox{\hyperlink{int__stack_8c_a752e65d8915d16b3885b1b2d0992b279}{stack}}[\mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}\ -\/\ 1\ -\/\ pos];}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ }
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{int__stack_8c_source_l00046}00046\ \textcolor{comment}{//\ EOF}}
+
+\end{DoxyCode}

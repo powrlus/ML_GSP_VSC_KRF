@@ -1,0 +1,138 @@
+\doxysection{Src/arith\+\_\+lib.c File Reference}
+\hypertarget{arith__lib_8c}{}\label{arith__lib_8c}\index{Src/arith\_lib.c@{Src/arith\_lib.c}}
+
+
+This modules contains some arithmetic functions.  
+
+
+{\ttfamily \#include "{}arith\+\_\+lib.\+h"{}}\newline
+{\ttfamily \#include "{}display.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{arith__lib_8c_afcc527dd675bd9e8b513b6d42479b894}{PRT\+\_\+\+BUF\+\_\+\+SIZE}}~16
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{arith__lib_8c_a59a67c48a200c56a4e3918ff75b00c07}{print\+Number}} (int v)
+\item 
+bool \mbox{\hyperlink{arith__lib_8c_a38ff9d0a276396c01b7830c5efefc396}{overflow\+Mult}} (int arg1, int arg2)
+\item 
+bool \mbox{\hyperlink{arith__lib_8c_afcc8b073a8031ad567d4a5b9dea266ea}{overflow\+Div}} (int arg1, int arg2)
+\item 
+bool \mbox{\hyperlink{arith__lib_8c_a318fab08fcd290d1ffc762178deed8ee}{overflow\+Add}} (int arg1, int arg2)
+\item 
+bool \mbox{\hyperlink{arith__lib_8c_a2c329edb8986b35dc08258a365f1826f}{overflow\+Sub}} (int arg1, int arg2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This modules contains some arithmetic functions. 
+
+\begin{DoxyAuthor}{Author}
+Franz Korf, HAW Hamburg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Sep 2023 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{arith__lib_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{arith__lib_8c_afcc527dd675bd9e8b513b6d42479b894}\index{arith\_lib.c@{arith\_lib.c}!PRT\_BUF\_SIZE@{PRT\_BUF\_SIZE}}
+\index{PRT\_BUF\_SIZE@{PRT\_BUF\_SIZE}!arith\_lib.c@{arith\_lib.c}}
+\doxysubsubsection{\texorpdfstring{PRT\_BUF\_SIZE}{PRT\_BUF\_SIZE}}
+{\footnotesize\ttfamily \label{arith__lib_8c_afcc527dd675bd9e8b513b6d42479b894} 
+\#define PRT\+\_\+\+BUF\+\_\+\+SIZE~16}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00013}{13}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{arith__lib_8c_source_l00014}{print\+Number()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{arith__lib_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{arith__lib_8c_a318fab08fcd290d1ffc762178deed8ee}\index{arith\_lib.c@{arith\_lib.c}!overflowAdd@{overflowAdd}}
+\index{overflowAdd@{overflowAdd}!arith\_lib.c@{arith\_lib.c}}
+\doxysubsubsection{\texorpdfstring{overflowAdd()}{overflowAdd()}}
+{\footnotesize\ttfamily \label{arith__lib_8c_a318fab08fcd290d1ffc762178deed8ee} 
+bool overflow\+Add (\begin{DoxyParamCaption}\item[{int}]{arg1}{, }\item[{int}]{arg2}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00054}{54}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{arith__lib_8c_source_l00066}{overflow\+Sub()}}.
+
+\Hypertarget{arith__lib_8c_afcc8b073a8031ad567d4a5b9dea266ea}\index{arith\_lib.c@{arith\_lib.c}!overflowDiv@{overflowDiv}}
+\index{overflowDiv@{overflowDiv}!arith\_lib.c@{arith\_lib.c}}
+\doxysubsubsection{\texorpdfstring{overflowDiv()}{overflowDiv()}}
+{\footnotesize\ttfamily \label{arith__lib_8c_afcc8b073a8031ad567d4a5b9dea266ea} 
+bool overflow\+Div (\begin{DoxyParamCaption}\item[{int}]{arg1}{, }\item[{int}]{arg2}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00048}{48}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{arith__lib_8c_a38ff9d0a276396c01b7830c5efefc396}\index{arith\_lib.c@{arith\_lib.c}!overflowMult@{overflowMult}}
+\index{overflowMult@{overflowMult}!arith\_lib.c@{arith\_lib.c}}
+\doxysubsubsection{\texorpdfstring{overflowMult()}{overflowMult()}}
+{\footnotesize\ttfamily \label{arith__lib_8c_a38ff9d0a276396c01b7830c5efefc396} 
+bool overflow\+Mult (\begin{DoxyParamCaption}\item[{int}]{arg1}{, }\item[{int}]{arg2}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00030}{30}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{arith__lib_8c_a2c329edb8986b35dc08258a365f1826f}\index{arith\_lib.c@{arith\_lib.c}!overflowSub@{overflowSub}}
+\index{overflowSub@{overflowSub}!arith\_lib.c@{arith\_lib.c}}
+\doxysubsubsection{\texorpdfstring{overflowSub()}{overflowSub()}}
+{\footnotesize\ttfamily \label{arith__lib_8c_a2c329edb8986b35dc08258a365f1826f} 
+bool overflow\+Sub (\begin{DoxyParamCaption}\item[{int}]{arg1}{, }\item[{int}]{arg2}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00066}{66}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{arith__lib_8c_a59a67c48a200c56a4e3918ff75b00c07}\index{arith\_lib.c@{arith\_lib.c}!printNumber@{printNumber}}
+\index{printNumber@{printNumber}!arith\_lib.c@{arith\_lib.c}}
+\doxysubsubsection{\texorpdfstring{printNumber()}{printNumber()}}
+{\footnotesize\ttfamily \label{arith__lib_8c_a59a67c48a200c56a4e3918ff75b00c07} 
+void print\+Number (\begin{DoxyParamCaption}\item[{int}]{v}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00014}{14}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+

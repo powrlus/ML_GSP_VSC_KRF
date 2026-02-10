@@ -1,0 +1,78 @@
+\doxysection{arith\+\_\+lib.\+h}
+\hypertarget{arith__lib_8h_source}{}\label{arith__lib_8h_source}\index{Inc/arith\_lib.h@{Inc/arith\_lib.h}}
+\mbox{\hyperlink{arith__lib_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ ARITH\_LIB\_H}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ ARITH\_LIB\_H}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00013}00013\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00014}00014\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00015}00015\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ checks\ overflow\ for\ int\ addition}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00016}00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00017}00017\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ arg1\ first\ summand}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00018}00018\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ arg2\ second\ summand}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00019}00019\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00020}00020\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ This\ function\ returns\ true,\ when\ arg1\ +\ arg2\ leads\ to\ an\ overflow.}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00021}00021\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00022}00022\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arith__lib_8h_a318fab08fcd290d1ffc762178deed8ee}{overflowAdd}}(\textcolor{keywordtype}{int}\ arg1,\ \textcolor{keywordtype}{int}\ arg2);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00024}00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00025}00025\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00026}00026\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ checks\ overflow\ for\ int\ subtraction}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00027}00027\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00028}00028\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ arg1\ minuend}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00029}00029\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ arg2\ subtrahend}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00030}00030\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00031}00031\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ This\ function\ returns\ true,\ when\ arg1\ -\/\ arg2\ leads\ to\ an\ overflow.}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00032}00032\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00033}00033\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arith__lib_8h_a2c329edb8986b35dc08258a365f1826f}{overflowSub}}(\textcolor{keywordtype}{int}\ arg1,\ \textcolor{keywordtype}{int}\ arg2);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00035}00035\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00036}00036\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00037}00037\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ checks\ overflow\ for\ int\ multiplication}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00038}00038\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00039}00039\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ arg1\ first\ factor}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00040}00040\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ arg2\ second\ factor}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00041}00041\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00042}00042\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ This\ function\ returns\ true,\ when\ arg1\ *\ arg2\ leads\ to\ an\ overflow.}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00043}00043\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00044}00044\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arith__lib_8h_a38ff9d0a276396c01b7830c5efefc396}{overflowMult}}(\textcolor{keywordtype}{int}\ arg1,\ \textcolor{keywordtype}{int}\ arg2);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00046}00046\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00047}00047\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00048}00048\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ checks\ overflow\ for\ int\ division}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00049}00049\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00050}00050\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ arg1\ dividend}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00051}00051\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ arg2\ divisor}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00052}00052\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00053}00053\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ This\ function\ returns\ true,\ when\ arg1\ /\ arg2\ leads\ to\ an\ overflow.}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00054}00054\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00055}00055\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arith__lib_8h_afcc8b073a8031ad567d4a5b9dea266ea}{overflowDiv}}(\textcolor{keywordtype}{int}\ arg1,\ \textcolor{keywordtype}{int}\ arg2);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00056}00056\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00057}00057\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00058}00058\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00059}00059\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ prints\ an\ int\ variable\ on\ the\ display.\ It\ uses\ modulo-\/\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00060}00060\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ division\ method\ with\ base\ 10.\ This\ method\ returns\ the\ rightmost\ digit\ first.\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00061}00061\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ But\ the\ output\ expects\ the\ leftmost\ digit\ first.\ This\ can\ be\ solved\ with\ a\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00062}00062\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ recursive\ function,\ but\ in\ the\ area\ of\ embedded\ systems\ with\ little\ stack\ size}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00063}00063\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ this\ approach\ has\ the\ disadvantage\ that\ the\ stack\ grows\ depending\ on\ the\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00064}00064\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ recursion\ depth.\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00065}00065\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ Using\ a\ while\ loop\ this\ function\ computes\ digits\ from\ right\ to\ left\ and\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00066}00066\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ stores\ them\ temporarily\ in\ a\ field.\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00067}00067\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ Furthermore,\ this\ function\ takes\ care\ for\ the\ fact\ that\ the\ number\ range\ of\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00068}00068\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ 2-\/complement\ is\ asymmetrical.\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00069}00069\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00070}00070\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ v\ number\ to\ be\ printed}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00071}00071\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00072}00072\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ None}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00073}00073\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00074}00074\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arith__lib_8h_a59a67c48a200c56a4e3918ff75b00c07}{printNumber}}(\textcolor{keywordtype}{int}\ v);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00076}00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ARITH\_LIB\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8h_source_l00077}00077\ \textcolor{comment}{//\ EOF}}
+
+\end{DoxyCode}

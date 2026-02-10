@@ -1,0 +1,139 @@
+\doxysection{Inc/int\+\_\+stack.h File Reference}
+\hypertarget{int__stack_8h}{}\label{int__stack_8h}\index{Inc/int\_stack.h@{Inc/int\_stack.h}}
+
+
+Header file of the int\+\_\+stack module.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{int__stack_8h_a524d97c94164a24e4d4a8e09622788a5}{init\+Stack}} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes / resets the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{int__stack_8h_a02a4ea9becef22d82d0b77fb01070bdd}{push}} (int value)
+\begin{DoxyCompactList}\small\item\em This function pushs an int value on the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{int__stack_8h_ad33e14d8616f2f1ba82202fd0fa3c107}{pop}} (int \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em This function pops an element for the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{int__stack_8h_a591946cf8533dbe7722a89b3b2094071}{elem\+At}} (int pos, int \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em This function assigns stack element at position pos to \texorpdfstring{$\ast$}{*}value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of the int\+\_\+stack module. 
+
+\begin{DoxyAuthor}{Author}
+Franz Korf, HAW Hamburg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Mar 2016 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{int__stack_8h_source}{int\+\_\+stack.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{int__stack_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{int__stack_8h_a591946cf8533dbe7722a89b3b2094071}\index{int\_stack.h@{int\_stack.h}!elemAt@{elemAt}}
+\index{elemAt@{elemAt}!int\_stack.h@{int\_stack.h}}
+\doxysubsubsection{\texorpdfstring{elemAt()}{elemAt()}}
+{\footnotesize\ttfamily \label{int__stack_8h_a591946cf8533dbe7722a89b3b2094071} 
+int elem\+At (\begin{DoxyParamCaption}\item[{int}]{pos}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+This function assigns stack element at position pos to \texorpdfstring{$\ast$}{*}value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position of element to be selected (pos == 0 \+: top of stack will be assigned). \\
+\hline
+{\em value} & The address to which the element will be written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Upon successful completion, a value of 0 is returned. Otherwise, a value of -\/1 is returned and the global integer variable errno is set to indicate the error. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00040}{40}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{int__stack_8h_a524d97c94164a24e4d4a8e09622788a5}\index{int\_stack.h@{int\_stack.h}!initStack@{initStack}}
+\index{initStack@{initStack}!int\_stack.h@{int\_stack.h}}
+\doxysubsubsection{\texorpdfstring{initStack()}{initStack()}}
+{\footnotesize\ttfamily \label{int__stack_8h_a524d97c94164a24e4d4a8e09622788a5} 
+void init\+Stack (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+This function initializes / resets the stack. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00022}{22}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00019}{clear\+System()}}.
+
+\Hypertarget{int__stack_8h_ad33e14d8616f2f1ba82202fd0fa3c107}\index{int\_stack.h@{int\_stack.h}!pop@{pop}}
+\index{pop@{pop}!int\_stack.h@{int\_stack.h}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{int__stack_8h_ad33e14d8616f2f1ba82202fd0fa3c107} 
+int pop (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+This function pops an element for the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The address to which pop should write the top element of the stack.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Upon successful completion, a value of 0 is returned. Otherwise, a value of -\/1 is returned and the global integer variable errno is set to indicate the error. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00034}{34}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{int__stack_8h_a02a4ea9becef22d82d0b77fb01070bdd}\index{int\_stack.h@{int\_stack.h}!push@{push}}
+\index{push@{push}!int\_stack.h@{int\_stack.h}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily \label{int__stack_8h_a02a4ea9becef22d82d0b77fb01070bdd} 
+int push (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+This function pushs an int value on the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value that will be pushed on the stack.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Upon successful completion, a value of 0 is returned. Otherwise, a value of -\/1 is returned and the global integer variable errno is set to indicate the error. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00028}{28}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+

@@ -1,0 +1,238 @@
+\doxysection{Src/int\+\_\+stack.c File Reference}
+\hypertarget{int__stack_8c}{}\label{int__stack_8c}\index{Src/int\_stack.c@{Src/int\_stack.c}}
+
+
+This modules implements t simple stack for integer values. The number of elements is fixed. Error handling will be implemented via standard errno concept of UNIX.  
+
+
+{\ttfamily \#include "{}int\+\_\+stack.\+h"{}}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{int__stack_8c_a43e26b4e9c4adc0eff402f1fac773833}{MAXANZELEMS}}~64
+\begin{DoxyCompactList}\small\item\em Maximal number of elements that can be stored in the stack. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{int__stack_8c_ac9f4c8c5b58331248e5ca358cbd27ffd}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}(cond,  err)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{int__stack_8c_a524d97c94164a24e4d4a8e09622788a5}{init\+Stack}} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes / resets the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{int__stack_8c_a02a4ea9becef22d82d0b77fb01070bdd}{push}} (int value)
+\begin{DoxyCompactList}\small\item\em This function pushs an int value on the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{int__stack_8c_ad33e14d8616f2f1ba82202fd0fa3c107}{pop}} (int \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em This function pops an element for the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{int__stack_8c_a591946cf8533dbe7722a89b3b2094071}{elem\+At}} (int pos, int \texorpdfstring{$\ast$}{*}value)
+\begin{DoxyCompactList}\small\item\em This function assigns stack element at position pos to \texorpdfstring{$\ast$}{*}value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}} = 0
+\begin{DoxyCompactList}\small\item\em next free element in stack array, \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{int__stack_8c_a752e65d8915d16b3885b1b2d0992b279}{stack}} \mbox{[}\mbox{\hyperlink{int__stack_8c_a43e26b4e9c4adc0eff402f1fac773833}{MAXANZELEMS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em An array of fixed size implements the stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This modules implements t simple stack for integer values. The number of elements is fixed. Error handling will be implemented via standard errno concept of UNIX. 
+
+\begin{DoxyAuthor}{Author}
+Franz Korf, HAW Hamburg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Mar 2016 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{int__stack_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{int__stack_8c_ac9f4c8c5b58331248e5ca358cbd27ffd}\index{int\_stack.c@{int\_stack.c}!CHECK\_AND\_RETURN@{CHECK\_AND\_RETURN}}
+\index{CHECK\_AND\_RETURN@{CHECK\_AND\_RETURN}!int\_stack.c@{int\_stack.c}}
+\doxysubsubsection{\texorpdfstring{CHECK\_AND\_RETURN}{CHECK\_AND\_RETURN}}
+{\footnotesize\ttfamily \label{int__stack_8c_ac9f4c8c5b58331248e5ca358cbd27ffd} 
+\#define CHECK\+\_\+\+AND\+\_\+\+RETURN(\begin{DoxyParamCaption}\item[{}]{cond}{, }\item[{}]{err}{}\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ \textcolor{keywordflow}{if}\ (cond)\ \{\ errno\ =\ (err);\ \textcolor{keywordflow}{return}\ -\/1;\ \}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00026}{26}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{int__stack_8c_source_l00040}{elem\+At()}}, \mbox{\hyperlink{int__stack_8c_source_l00034}{pop()}}, and \mbox{\hyperlink{int__stack_8c_source_l00028}{push()}}.
+
+\Hypertarget{int__stack_8c_a43e26b4e9c4adc0eff402f1fac773833}\index{int\_stack.c@{int\_stack.c}!MAXANZELEMS@{MAXANZELEMS}}
+\index{MAXANZELEMS@{MAXANZELEMS}!int\_stack.c@{int\_stack.c}}
+\doxysubsubsection{\texorpdfstring{MAXANZELEMS}{MAXANZELEMS}}
+{\footnotesize\ttfamily \label{int__stack_8c_a43e26b4e9c4adc0eff402f1fac773833} 
+\#define MAXANZELEMS~64}
+
+
+
+Maximal number of elements that can be stored in the stack. 
+
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00014}{14}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{int__stack_8c_source_l00028}{push()}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{int__stack_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{int__stack_8c_a591946cf8533dbe7722a89b3b2094071}\index{int\_stack.c@{int\_stack.c}!elemAt@{elemAt}}
+\index{elemAt@{elemAt}!int\_stack.c@{int\_stack.c}}
+\doxysubsubsection{\texorpdfstring{elemAt()}{elemAt()}}
+{\footnotesize\ttfamily \label{int__stack_8c_a591946cf8533dbe7722a89b3b2094071} 
+int elem\+At (\begin{DoxyParamCaption}\item[{int}]{pos}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+This function assigns stack element at position pos to \texorpdfstring{$\ast$}{*}value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position of element to be selected (pos == 0 \+: top of stack will be assigned). \\
+\hline
+{\em value} & The address to which the element will be written.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Upon successful completion, a value of 0 is returned. Otherwise, a value of -\/1 is returned and the global integer variable errno is set to indicate the error. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00040}{40}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{int__stack_8c_a524d97c94164a24e4d4a8e09622788a5}\index{int\_stack.c@{int\_stack.c}!initStack@{initStack}}
+\index{initStack@{initStack}!int\_stack.c@{int\_stack.c}}
+\doxysubsubsection{\texorpdfstring{initStack()}{initStack()}}
+{\footnotesize\ttfamily \label{int__stack_8c_a524d97c94164a24e4d4a8e09622788a5} 
+void init\+Stack (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+This function initializes / resets the stack. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00022}{22}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00019}{clear\+System()}}.
+
+\Hypertarget{int__stack_8c_ad33e14d8616f2f1ba82202fd0fa3c107}\index{int\_stack.c@{int\_stack.c}!pop@{pop}}
+\index{pop@{pop}!int\_stack.c@{int\_stack.c}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{int__stack_8c_ad33e14d8616f2f1ba82202fd0fa3c107} 
+int pop (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{value}{}\end{DoxyParamCaption})}
+
+
+
+This function pops an element for the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The address to which pop should write the top element of the stack.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Upon successful completion, a value of 0 is returned. Otherwise, a value of -\/1 is returned and the global integer variable errno is set to indicate the error. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00034}{34}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{int__stack_8c_a02a4ea9becef22d82d0b77fb01070bdd}\index{int\_stack.c@{int\_stack.c}!push@{push}}
+\index{push@{push}!int\_stack.c@{int\_stack.c}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily \label{int__stack_8c_a02a4ea9becef22d82d0b77fb01070bdd} 
+int push (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+This function pushs an int value on the stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value that will be pushed on the stack.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Upon successful completion, a value of 0 is returned. Otherwise, a value of -\/1 is returned and the global integer variable errno is set to indicate the error. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00028}{28}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{int__stack_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{int__stack_8c_a752e65d8915d16b3885b1b2d0992b279}\index{int\_stack.c@{int\_stack.c}!stack@{stack}}
+\index{stack@{stack}!int\_stack.c@{int\_stack.c}}
+\doxysubsubsection{\texorpdfstring{stack}{stack}}
+{\footnotesize\ttfamily \label{int__stack_8c_a752e65d8915d16b3885b1b2d0992b279} 
+int stack\mbox{[}\mbox{\hyperlink{int__stack_8c_a43e26b4e9c4adc0eff402f1fac773833}{MAXANZELEMS}}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+An array of fixed size implements the stack. 
+
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00020}{20}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{int__stack_8c_source_l00040}{elem\+At()}}, \mbox{\hyperlink{int__stack_8c_source_l00034}{pop()}}, and \mbox{\hyperlink{int__stack_8c_source_l00028}{push()}}.
+
+\Hypertarget{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c}\index{int\_stack.c@{int\_stack.c}!top@{top}}
+\index{top@{top}!int\_stack.c@{int\_stack.c}}
+\doxysubsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily \label{int__stack_8c_af93f4f37fc2ad9c37af4a715423b110c} 
+int top = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+next free element in stack array, 
+
+
+
+Definition at line \mbox{\hyperlink{int__stack_8c_source_l00016}{16}} of file \mbox{\hyperlink{int__stack_8c_source}{int\+\_\+stack.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{int__stack_8c_source_l00040}{elem\+At()}}, \mbox{\hyperlink{int__stack_8c_source_l00022}{init\+Stack()}}, \mbox{\hyperlink{int__stack_8c_source_l00034}{pop()}}, and \mbox{\hyperlink{int__stack_8c_source_l00028}{push()}}.
+

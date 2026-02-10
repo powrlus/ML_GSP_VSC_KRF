@@ -1,13 +1,15 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "STLink@pyOCD (launch)",
             "type": "gdbtarget",
             "request": "launch",
             "cwd": "${workspaceFolder}/Programs/KL1_SW_Entprellen",
             "program": "out/KL1_SW_Entprellen/ITSboard/Debug/KL1_SW_Entprellen.axf",
-            "gdb": "arm-none-eabi-gdb",
+            "cwd": "${workspaceFolder}/Programs/DrehgeberInterrupt",
+            "program": "out/DrehgeberInterrupt/ITSboard/Release/DrehgeberInterrupt.axf",
             "preLaunchTask": "CMSIS Load",
             "initCommands": [
                 "monitor reset halt",
@@ -40,7 +42,8 @@
                 "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
                 "updateConfiguration": "auto"
             },
-            "auxiliaryGdb": true
+            "auxiliaryGdb": true,
+            "gdb": "arm-none-eabi-gdb"
         },
         {
             "name": "STLink@pyOCD (attach)",
@@ -48,7 +51,8 @@
             "request": "attach",
             "cwd": "${workspaceFolder}/Programs/KL1_SW_Entprellen",
             "program": "out/KL1_SW_Entprellen/ITSboard/Debug/KL1_SW_Entprellen.axf",
-            "gdb": "arm-none-eabi-gdb",
+            "cwd": "${workspaceFolder}/Programs/DrehgeberInterrupt",
+            "program": "out/DrehgeberInterrupt/ITSboard/Release/DrehgeberInterrupt.axf",
             "initCommands": [
                 ""
             ],
@@ -66,7 +70,8 @@
                 "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
                 "updateConfiguration": "auto"
             },
-            "auxiliaryGdb": true
+            "auxiliaryGdb": true,
+            "gdb": "arm-none-eabi-gdb"
         }
     ]
 }

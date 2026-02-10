@@ -1,0 +1,83 @@
+\doxysection{display.\+h}
+\hypertarget{display_8h_source}{}\label{display_8h_source}\index{Inc/display.h@{Inc/display.h}}
+\mbox{\hyperlink{display_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ DISPLAY\_H}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ DISPLAY\_H}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00012}00012\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00013}00013\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00014}00014\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ initialize\ the\ output\ function.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00015}00015\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00016}00016\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ void\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00017}00017\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00018}00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_a2b00342dede324282512c2d2b17f58b8}{initDisplay}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00020}00020\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00021}00021\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00022}00022\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ sets\ error\ mode\ colors\ for\ stdout\ terminal.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00023}00023\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00024}00024\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ void\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00025}00025\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00026}00026\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_a5dd355818a51f3a802cef75b3d0a99dd}{setErrMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00028}00028\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00029}00029\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00030}00030\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ sets\ normal\ mode\ colors\ for\ stdout\ terminal.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00031}00031\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00032}00032\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ void\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00033}00033\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00034}00034\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_aa977481486a9816d8ab1ce12a9a68034}{setNormalMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00036}00036\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00037}00037\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00038}00038\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ prints\ a\ string\ to\ stdout\ terminal.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00039}00039\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00040}00040\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ msg\ The\ value\ that\ will\ be\ printed\ on\ on\ the\ terminal.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00041}00041\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00042}00042\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ void\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00043}00043\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00044}00044\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_af0cca1eee630b9186ca4d09e95c7f734}{printStdout}}(\textcolor{keywordtype}{char}\ *\ msg);}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00046}00046\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00047}00047\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00048}00048\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ prints\ a\ character\ to\ echo\ terminal.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00049}00049\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00050}00050\ \textcolor{comment}{\ *\ \ @param\ \ \ \ \ \ c\ The\ character\ to\ be\ printed.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00051}00051\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00052}00052\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ void\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00053}00053\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00054}00054\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_acb9d00d18da3afe92a0c55f5b35ce52a}{printToEchoLine}}(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00056}00056\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00057}00057\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00058}00058\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ clears\ echo\ terminal.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00059}00059\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00060}00060\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ void\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00061}00061\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00062}00062\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_ab5ba494b78d178684565f36d7948f8c3}{clearEchoTerm}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00064}00064\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00065}00065\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00066}00066\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ This\ function\ clears\ stdout\ terminal.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00067}00067\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00068}00068\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ void\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00069}00069\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00070}00070\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8h_a24d8dffd81e1a6297ea372b718bb15cd}{clearStdout}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00072}00072\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00073}00073\ \textcolor{comment}{\ ****************************************************************************************}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00074}00074\ \textcolor{comment}{\ *\ \ @brief\ \ \ \ \ \ If\ the\ current\ line\ of\ stdout\ terminal\ is\ its\ bottom\ line,\ this\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00075}00075\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ function\ returns\ true.}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00076}00076\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00077}00077\ \textcolor{comment}{\ *\ \ @return\ \ \ \ \ true\ <=>\ current\ line\ ==\ bottom\ line\ }}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00078}00078\ \textcolor{comment}{\ ****************************************************************************************/}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00079}00079\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{display_8h_a95002ad53098168472dcaaf34d2f01f9}{isBottomLine}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00081}00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ OUTPUT\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00082}00082\ \textcolor{comment}{//\ EOF}}
+
+\end{DoxyCode}

@@ -1,0 +1,111 @@
+\doxysection{Inc/arith\+\_\+lib.h File Reference}
+\hypertarget{arith__lib_8h}{}\label{arith__lib_8h}\index{Inc/arith\_lib.h@{Inc/arith\_lib.h}}
+
+
+This module contains some arithmetic functions.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{arith__lib_8h_a318fab08fcd290d1ffc762178deed8ee}{overflow\+Add}} (int arg1, int arg2)
+\item 
+bool \mbox{\hyperlink{arith__lib_8h_a2c329edb8986b35dc08258a365f1826f}{overflow\+Sub}} (int arg1, int arg2)
+\item 
+bool \mbox{\hyperlink{arith__lib_8h_a38ff9d0a276396c01b7830c5efefc396}{overflow\+Mult}} (int arg1, int arg2)
+\item 
+bool \mbox{\hyperlink{arith__lib_8h_afcc8b073a8031ad567d4a5b9dea266ea}{overflow\+Div}} (int arg1, int arg2)
+\item 
+void \mbox{\hyperlink{arith__lib_8h_a59a67c48a200c56a4e3918ff75b00c07}{print\+Number}} (int v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module contains some arithmetic functions. 
+
+\begin{DoxyAuthor}{Author}
+Franz Korf, HAW Hamburg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Sep 2023 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{arith__lib_8h_source}{arith\+\_\+lib.\+h}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{arith__lib_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{arith__lib_8h_a318fab08fcd290d1ffc762178deed8ee}\index{arith\_lib.h@{arith\_lib.h}!overflowAdd@{overflowAdd}}
+\index{overflowAdd@{overflowAdd}!arith\_lib.h@{arith\_lib.h}}
+\doxysubsubsection{\texorpdfstring{overflowAdd()}{overflowAdd()}}
+{\footnotesize\ttfamily \label{arith__lib_8h_a318fab08fcd290d1ffc762178deed8ee} 
+bool overflow\+Add (\begin{DoxyParamCaption}\item[{int}]{arg1}{, }\item[{int}]{arg2}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00054}{54}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{arith__lib_8c_source_l00066}{overflow\+Sub()}}.
+
+\Hypertarget{arith__lib_8h_afcc8b073a8031ad567d4a5b9dea266ea}\index{arith\_lib.h@{arith\_lib.h}!overflowDiv@{overflowDiv}}
+\index{overflowDiv@{overflowDiv}!arith\_lib.h@{arith\_lib.h}}
+\doxysubsubsection{\texorpdfstring{overflowDiv()}{overflowDiv()}}
+{\footnotesize\ttfamily \label{arith__lib_8h_afcc8b073a8031ad567d4a5b9dea266ea} 
+bool overflow\+Div (\begin{DoxyParamCaption}\item[{int}]{arg1}{, }\item[{int}]{arg2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00048}{48}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{arith__lib_8h_a38ff9d0a276396c01b7830c5efefc396}\index{arith\_lib.h@{arith\_lib.h}!overflowMult@{overflowMult}}
+\index{overflowMult@{overflowMult}!arith\_lib.h@{arith\_lib.h}}
+\doxysubsubsection{\texorpdfstring{overflowMult()}{overflowMult()}}
+{\footnotesize\ttfamily \label{arith__lib_8h_a38ff9d0a276396c01b7830c5efefc396} 
+bool overflow\+Mult (\begin{DoxyParamCaption}\item[{int}]{arg1}{, }\item[{int}]{arg2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00030}{30}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{arith__lib_8h_a2c329edb8986b35dc08258a365f1826f}\index{arith\_lib.h@{arith\_lib.h}!overflowSub@{overflowSub}}
+\index{overflowSub@{overflowSub}!arith\_lib.h@{arith\_lib.h}}
+\doxysubsubsection{\texorpdfstring{overflowSub()}{overflowSub()}}
+{\footnotesize\ttfamily \label{arith__lib_8h_a2c329edb8986b35dc08258a365f1826f} 
+bool overflow\+Sub (\begin{DoxyParamCaption}\item[{int}]{arg1}{, }\item[{int}]{arg2}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00066}{66}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{arith__lib_8h_a59a67c48a200c56a4e3918ff75b00c07}\index{arith\_lib.h@{arith\_lib.h}!printNumber@{printNumber}}
+\index{printNumber@{printNumber}!arith\_lib.h@{arith\_lib.h}}
+\doxysubsubsection{\texorpdfstring{printNumber()}{printNumber()}}
+{\footnotesize\ttfamily \label{arith__lib_8h_a59a67c48a200c56a4e3918ff75b00c07} 
+void print\+Number (\begin{DoxyParamCaption}\item[{int}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{arith__lib_8c_source_l00014}{14}} of file \mbox{\hyperlink{arith__lib_8c_source}{arith\+\_\+lib.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+

@@ -1,0 +1,295 @@
+\doxysection{Inc/token.h File Reference}
+\hypertarget{token_8h}{}\label{token_8h}\index{Inc/token.h@{Inc/token.h}}
+
+
+This file stores all token returned by the scanner.  
+
+
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t__token}{T\+\_\+token}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{token_8h_abc544a4ed22112e62773c113652c5063}{NUMBER}}~\textquotesingle{}n\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for an int number. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_a0ea7ff5947c5f5430a29fdd98391eb2a}{PLUS}}~\textquotesingle{}+\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for + operator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_a5381a445a1e4bdc36460151d82eed95a}{MINUS}}~\textquotesingle{}-\/\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for -\/ operator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_ac441f219c1d0f60b3f606e0e6f31abd2}{MULT}}~\textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for \texorpdfstring{$\ast$}{*} operator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_a8295e0aed07a8923d8363ce46c7b08e2}{DIV}}~\textquotesingle{}/\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for / operator. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_ae69270b242060c83732b7285a475c7c4}{PRT}}~\textquotesingle{}p\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for print command. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_aac9b57651bcead0a7564efe6460e5310}{SWAP}}~\textquotesingle{}r\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for swap command. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_ae20d165046dc8611099b64e90f84da63}{PRT\+\_\+\+ALL}}~\textquotesingle{}P\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for print total stack command. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_a611cc9b5f655508482f3d7a9751c182a}{CLEAR}}~\textquotesingle{}C\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for clear command. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}{DOUBLE}}~\textquotesingle{}d\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for double top of stack command. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}{ENTER}}~\textquotesingle{} \textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for ENTER button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_a33ed6c61d07247de6740d898a9935984}{UNEXPECTED}}~\textquotesingle{}U\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Token for an unexpected command / button. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{token_8h_a1bde9ac0e4c1c736578ab9941eef76c0}{OVERFLOW}}~\textquotesingle{}O\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Overflow during input of a number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file stores all token returned by the scanner. 
+
+\begin{DoxyAuthor}{Author}
+Franz Korf, HAW Hamburg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Mar 2016 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+\label{doc-define-members}
+\Hypertarget{token_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{token_8h_a611cc9b5f655508482f3d7a9751c182a}\index{token.h@{token.h}!CLEAR@{CLEAR}}
+\index{CLEAR@{CLEAR}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{CLEAR}{CLEAR}}
+{\footnotesize\ttfamily \label{token_8h_a611cc9b5f655508482f3d7a9751c182a} 
+\#define CLEAR~\textquotesingle{}C\textquotesingle{}}
+
+
+
+Token for clear command. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00020}{20}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00024}{err\+Handler()}}, \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_a8295e0aed07a8923d8363ce46c7b08e2}\index{token.h@{token.h}!DIV@{DIV}}
+\index{DIV@{DIV}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{DIV}{DIV}}
+{\footnotesize\ttfamily \label{token_8h_a8295e0aed07a8923d8363ce46c7b08e2} 
+\#define DIV~\textquotesingle{}/\textquotesingle{}}
+
+
+
+Token for / operator. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00016}{16}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}\index{token.h@{token.h}!DOUBLE@{DOUBLE}}
+\index{DOUBLE@{DOUBLE}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{DOUBLE}{DOUBLE}}
+{\footnotesize\ttfamily \label{token_8h_a8747af38b86aa2bbcda2f1b1aa0888c2} 
+\#define DOUBLE~\textquotesingle{}d\textquotesingle{}}
+
+
+
+Token for double top of stack command. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00021}{21}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_af4bced5cf8ed55746d4b5d34f9a0fe39}\index{token.h@{token.h}!ENTER@{ENTER}}
+\index{ENTER@{ENTER}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{ENTER}{ENTER}}
+{\footnotesize\ttfamily \label{token_8h_af4bced5cf8ed55746d4b5d34f9a0fe39} 
+\#define ENTER~\textquotesingle{} \textquotesingle{}}
+
+
+
+Token for ENTER button. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00022}{22}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_a5381a445a1e4bdc36460151d82eed95a}\index{token.h@{token.h}!MINUS@{MINUS}}
+\index{MINUS@{MINUS}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{MINUS}{MINUS}}
+{\footnotesize\ttfamily \label{token_8h_a5381a445a1e4bdc36460151d82eed95a} 
+\#define MINUS~\textquotesingle{}-\/\textquotesingle{}}
+
+
+
+Token for -\/ operator. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00014}{14}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_ac441f219c1d0f60b3f606e0e6f31abd2}\index{token.h@{token.h}!MULT@{MULT}}
+\index{MULT@{MULT}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{MULT}{MULT}}
+{\footnotesize\ttfamily \label{token_8h_ac441f219c1d0f60b3f606e0e6f31abd2} 
+\#define MULT~\textquotesingle{}\texorpdfstring{$\ast$}{*}\textquotesingle{}}
+
+
+
+Token for \texorpdfstring{$\ast$}{*} operator. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00015}{15}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_abc544a4ed22112e62773c113652c5063}\index{token.h@{token.h}!NUMBER@{NUMBER}}
+\index{NUMBER@{NUMBER}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER}{NUMBER}}
+{\footnotesize\ttfamily \label{token_8h_abc544a4ed22112e62773c113652c5063} 
+\#define NUMBER~\textquotesingle{}n\textquotesingle{}}
+
+
+
+Token for an int number. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00012}{12}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_a1bde9ac0e4c1c736578ab9941eef76c0}\index{token.h@{token.h}!OVERFLOW@{OVERFLOW}}
+\index{OVERFLOW@{OVERFLOW}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{OVERFLOW}{OVERFLOW}}
+{\footnotesize\ttfamily \label{token_8h_a1bde9ac0e4c1c736578ab9941eef76c0} 
+\#define OVERFLOW~\textquotesingle{}O\textquotesingle{}}
+
+
+
+Overflow during input of a number. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00024}{24}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_a0ea7ff5947c5f5430a29fdd98391eb2a}\index{token.h@{token.h}!PLUS@{PLUS}}
+\index{PLUS@{PLUS}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{PLUS}{PLUS}}
+{\footnotesize\ttfamily \label{token_8h_a0ea7ff5947c5f5430a29fdd98391eb2a} 
+\#define PLUS~\textquotesingle{}+\textquotesingle{}}
+
+
+
+Token for + operator. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00013}{13}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_ae69270b242060c83732b7285a475c7c4}\index{token.h@{token.h}!PRT@{PRT}}
+\index{PRT@{PRT}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{PRT}{PRT}}
+{\footnotesize\ttfamily \label{token_8h_ae69270b242060c83732b7285a475c7c4} 
+\#define PRT~\textquotesingle{}p\textquotesingle{}}
+
+
+
+Token for print command. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00017}{17}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_ae20d165046dc8611099b64e90f84da63}\index{token.h@{token.h}!PRT\_ALL@{PRT\_ALL}}
+\index{PRT\_ALL@{PRT\_ALL}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{PRT\_ALL}{PRT\_ALL}}
+{\footnotesize\ttfamily \label{token_8h_ae20d165046dc8611099b64e90f84da63} 
+\#define PRT\+\_\+\+ALL~\textquotesingle{}P\textquotesingle{}}
+
+
+
+Token for print total stack command. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00019}{19}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_aac9b57651bcead0a7564efe6460e5310}\index{token.h@{token.h}!SWAP@{SWAP}}
+\index{SWAP@{SWAP}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{SWAP}{SWAP}}
+{\footnotesize\ttfamily \label{token_8h_aac9b57651bcead0a7564efe6460e5310} 
+\#define SWAP~\textquotesingle{}r\textquotesingle{}}
+
+
+
+Token for swap command. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00018}{18}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{token_8h_a33ed6c61d07247de6740d898a9935984}\index{token.h@{token.h}!UNEXPECTED@{UNEXPECTED}}
+\index{UNEXPECTED@{UNEXPECTED}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{UNEXPECTED}{UNEXPECTED}}
+{\footnotesize\ttfamily \label{token_8h_a33ed6c61d07247de6740d898a9935984} 
+\#define UNEXPECTED~\textquotesingle{}U\textquotesingle{}}
+
+
+
+Token for an unexpected command / button. 
+
+
+
+Definition at line \mbox{\hyperlink{token_8h_source_l00023}{23}} of file \mbox{\hyperlink{token_8h_source}{token.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+

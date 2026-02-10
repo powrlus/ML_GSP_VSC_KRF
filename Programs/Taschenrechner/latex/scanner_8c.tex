@@ -1,0 +1,66 @@
+\doxysection{Src/scanner.c File Reference}
+\hypertarget{scanner_8c}{}\label{scanner_8c}\index{Src/scanner.c@{Src/scanner.c}}
+
+
+This module implements a simple scanner for keypad input.  
+
+
+{\ttfamily \#include "{}scanner.\+h"{}}\newline
+{\ttfamily \#include "{}display.\+h"{}}\newline
+{\ttfamily \#include "{}keypad.\+h"{}}\newline
+{\ttfamily \#include "{}token.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char \mbox{\hyperlink{scanner_8c_a65736a84bdb175862ead50e9f7304eca}{next\+Char}} (void)
+\item 
+\mbox{\hyperlink{struct_t__token}{T\+\_\+token}} \mbox{\hyperlink{scanner_8c_af0762539b69857bb47bf0d827c9c0b38}{next\+Token}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module implements a simple scanner for keypad input. 
+
+\begin{DoxyAuthor}{Author}
+Franz Korf, HAW Hamburg 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Mar 2016 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{scanner_8c_source}{scanner.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{scanner_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{scanner_8c_a65736a84bdb175862ead50e9f7304eca}\index{scanner.c@{scanner.c}!nextChar@{nextChar}}
+\index{nextChar@{nextChar}!scanner.c@{scanner.c}}
+\doxysubsubsection{\texorpdfstring{nextChar()}{nextChar()}}
+{\footnotesize\ttfamily \label{scanner_8c_a65736a84bdb175862ead50e9f7304eca} 
+char next\+Char (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{scanner_8c_source_l00020}{20}} of file \mbox{\hyperlink{scanner_8c_source}{scanner.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{scanner_8c_source_l00024}{next\+Token()}}.
+
+\Hypertarget{scanner_8c_af0762539b69857bb47bf0d827c9c0b38}\index{scanner.c@{scanner.c}!nextToken@{nextToken}}
+\index{nextToken@{nextToken}!scanner.c@{scanner.c}}
+\doxysubsubsection{\texorpdfstring{nextToken()}{nextToken()}}
+{\footnotesize\ttfamily \label{scanner_8c_af0762539b69857bb47bf0d827c9c0b38} 
+\mbox{\hyperlink{struct_t__token}{T\+\_\+token}} next\+Token (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{scanner_8c_source_l00024}{24}} of file \mbox{\hyperlink{scanner_8c_source}{scanner.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00024}{err\+Handler()}}, and \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+

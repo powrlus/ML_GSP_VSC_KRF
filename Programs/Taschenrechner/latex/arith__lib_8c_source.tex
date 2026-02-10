@@ -1,0 +1,75 @@
+\doxysection{arith\+\_\+lib.\+c}
+\hypertarget{arith__lib_8c_source}{}\label{arith__lib_8c_source}\index{Src/arith\_lib.c@{Src/arith\_lib.c}}
+\mbox{\hyperlink{arith__lib_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00007}00007\ \ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{arith__lib_8h}{arith\_lib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{display_8h}{display.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <limits.h>}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00013}\mbox{\hyperlink{arith__lib_8c_afcc527dd675bd9e8b513b6d42479b894}{00013}}\ \textcolor{preprocessor}{\#define\ PRT\_BUF\_SIZE\ \ \ \ 16}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00014}\mbox{\hyperlink{arith__lib_8c_a59a67c48a200c56a4e3918ff75b00c07}{00014}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{arith__lib_8c_a59a67c48a200c56a4e3918ff75b00c07}{printNumber}}(\textcolor{keywordtype}{int}\ v)\ \{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00015}00015\ \ \ \ \textcolor{keywordtype}{char}\ buf[\mbox{\hyperlink{arith__lib_8c_afcc527dd675bd9e8b513b6d42479b894}{PRT\_BUF\_SIZE}}];}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00016}00016\ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ \mbox{\hyperlink{arith__lib_8c_afcc527dd675bd9e8b513b6d42479b894}{PRT\_BUF\_SIZE}}\ -\/\ 1;\ \textcolor{comment}{//\ next\ free\ pos}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00017}00017\ \ \ \ buf[pos-\/-\/]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00018}00018\ \ \ \ \textcolor{keywordtype}{int}\ t\ =\ v;}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00019}00019\ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00020}00020\ \ \ \ \ \ \ buf[pos-\/-\/]\ =\ \textcolor{charliteral}{'0'}\ +\ abs(t\ \%\ 10);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00021}00021\ \ \ \ \ \ \ t\ =\ t\ /\ 10;}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00022}00022\ \ \ \ \}\ \textcolor{keywordflow}{while}\ (t\ !=\ 0);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00023}00023\ \ \ \ \textcolor{keywordflow}{if}\ (v\ <\ 0)\{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00024}00024\ \ \ \ \ \ \ buf[pos-\/-\/]\ =\ \textcolor{charliteral}{'-\/'};}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00025}00025\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00026}00026\ \ \ \ \mbox{\hyperlink{display_8c_a69f1d3d0f0a75e50b51aa067d231caeb}{printStdout}}(buf\ +\ pos\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00027}00027\ \ \ \ \mbox{\hyperlink{display_8c_a69f1d3d0f0a75e50b51aa067d231caeb}{printStdout}}(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00030}\mbox{\hyperlink{arith__lib_8c_a38ff9d0a276396c01b7830c5efefc396}{00030}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arith__lib_8c_a38ff9d0a276396c01b7830c5efefc396}{overflowMult}}(\textcolor{keywordtype}{int}\ arg1,\ \textcolor{keywordtype}{int}\ arg2)\ \{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00031}00031\ \ \ \ \ \ \textcolor{comment}{//\ if\ one\ factor\ ==\ 0,\ no\ overflow}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00032}00032\ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((0\ ==\ arg1)\ ||\ (0\ ==\ arg2))\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ Both\ factors\ are\ not\ equal\ to\ 0\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00034}00034\ \ \ \ \ \ \textcolor{comment}{//\ Due\ to\ the\ asymetric\ range\ of\ int\ =\ -\/2\string^31\ ...\ 2\string^31-\/1\ ,\ two\ cases\ must\ be\ differed\ }}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00035}00035\ \ \ \ \ \ \textcolor{comment}{//\ case\ 1:\ result\ positiv\ :\ arg1\ *\ arg2\ <=\ INT\_MAX\ <=>\ arg1\ <=\ INT\_MAX/arg2}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00036}00036\ \ \ \ \ \ \textcolor{keywordflow}{if}\ (((0\ <\ arg1)\ \&\&\ (0\ <\ arg2))\ ||\ ((0\ >\ arg1)\ \&\&\ (0\ >\ arg2)))\ \{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00037}00037\ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((arg1\ ==\ INT\_MIN)\ ||\ (arg2\ ==\ INT\_MIN))\{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ Since\ the\ second\ factor\ is\ not\ 0,\ multiplication\ always\ returns\ an\ overflow.}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00039}00039\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00040}00040\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (abs(arg1)\ >\ (INT\_MAX\ /\ abs(arg2)));\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00041}00041\ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ one\ factor\ is\ negativ,\ the\ other\ one\ is\ positiv}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00043}00043\ \ \ \ \ \ \textcolor{keywordtype}{int}\ neg\_arg\ =\ (arg1\ >\ arg2)\ ?\ arg2\ :\ arg1;}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00044}00044\ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\_arg\ =\ (arg1\ >\ arg2)\ ?\ arg1\ :\ arg2;}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00045}00045\ \ \ \ \ \ \textcolor{keywordflow}{return}\ (neg\_arg\ <\ (INT\_MIN\ /\ pos\_arg));\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00048}\mbox{\hyperlink{arith__lib_8c_afcc8b073a8031ad567d4a5b9dea266ea}{00048}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arith__lib_8c_afcc8b073a8031ad567d4a5b9dea266ea}{overflowDiv}}(\textcolor{keywordtype}{int}\ arg1,\ \textcolor{keywordtype}{int}\ arg2)\ \{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00049}00049\ \ \ \ \textcolor{comment}{//\ arg2\ =\ 0\ =>\ overflow}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00050}00050\ \ \ \ \textcolor{comment}{//\ arg2\ =\ -\/1\ und\ arg1\ =\ MIN\_INT\ =>\ overflow\ -\/\ due\ to\ the\ asymmetric\ number\ range}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00051}00051\ \ \ \ \textcolor{keywordflow}{return}\ (arg2\ ==\ 0)\ ||\ (arg2\ ==\ -\/1)\ \&\&\ (arg1\ ==\ INT\_MIN);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00054}\mbox{\hyperlink{arith__lib_8c_a318fab08fcd290d1ffc762178deed8ee}{00054}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arith__lib_8c_a318fab08fcd290d1ffc762178deed8ee}{overflowAdd}}(\textcolor{keywordtype}{int}\ arg1,\ \textcolor{keywordtype}{int}\ arg2)\ \{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00055}00055\ \ \ \ \textcolor{comment}{//\ Bedingung\ für Overflow\ bei\ erg\ =\ arg2\ +\ arg1}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00056}00056\ \ \ \ \textcolor{comment}{//\ Deckt\ Asymmetrie\ der\ 2-\/Komplementdarstellung\ ab\ (MIN\_INT\ =\ (-\/1)*MAX\_INT\ -\/\ 1}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ arg1\ ==\ 0\ oder\ arg2\ ==\ 0\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ kein\ Overflow}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00058}00058\ \ \ \ \textcolor{comment}{//\ arg1\ <\ 0\ und\ arg2\ >\ 0\ oder\ arg1\ >\ 0\ and\ arg2\ <\ 0\ :\ kein\ Overflow}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00059}00059\ \ \ \ \textcolor{comment}{//\ arg1\ <\ 0\ und\ arg2\ <\ 0\ und\ arg1\ +\ arg2\ >\ 0\ \ \ \ \ \ \ \ :\ Overflow}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00060}00060\ \ \ \ \textcolor{comment}{//\ arg1\ >\ 0\ und\ arg2\ >\ 0\ und\ arg1\ +\ arg2\ <\ 0\ \ \ \ \ \ \ \ :\ Overflow}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00061}00061\ \ \ \ \textcolor{keywordtype}{int}\ erg\ =\ arg2\ +\ arg1;}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00062}00062\ \ \ \ \textcolor{keywordflow}{return}\ ((arg1\ >\ 0)\ \&\&\ (arg2\ >\ 0)\ \&\&\ (erg\ <\ 0))||}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ ((arg1\ <\ 0)\ \&\&\ (arg2\ <\ 0)\ \&\&\ (erg\ >\ 0));\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00066}\mbox{\hyperlink{arith__lib_8c_a2c329edb8986b35dc08258a365f1826f}{00066}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{arith__lib_8c_a2c329edb8986b35dc08258a365f1826f}{overflowSub}}(\textcolor{keywordtype}{int}\ arg1,\ \textcolor{keywordtype}{int}\ arg2)\ \{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00067}00067\ \ \ \ \textcolor{comment}{//\ Deckt\ Asymmetrie\ der\ 2-\/Komplementdarstellung\ ab\ (MIN\_INT\ =\ (-\/1)*MAX\_INT\ -\/\ 1}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00068}00068\ \ \ \ \textcolor{keywordflow}{if}\ (arg2\ ==\ INT\_MIN)\ \{}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00069}00069\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ arg1\ >\ -\/1;}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00070}00070\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00071}00071\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{arith__lib_8c_a318fab08fcd290d1ffc762178deed8ee}{overflowAdd}}(arg1,\ -\/1\ *\ arg2);}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{arith__lib_8c_source_l00074}00074\ \textcolor{comment}{//\ EOF}}
+
+\end{DoxyCode}

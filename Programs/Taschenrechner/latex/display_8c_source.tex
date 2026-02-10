@@ -1,0 +1,67 @@
+\doxysection{display.\+c}
+\hypertarget{display_8c_source}{}\label{display_8c_source}\index{Src/display.c@{Src/display.c}}
+\mbox{\hyperlink{display_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{display_8h}{display.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}terminal.h"{}}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}LCD\_GUI.h"{}}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}LCD\_Touch.h"{}}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}keypad.h"{}}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00018}\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{00018}}\ \textcolor{keyword}{static}\ Terminal\ \mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}}\ =\ INVALID\_TERM;}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00019}\mbox{\hyperlink{display_8c_ab48cb3ec5628ceae5cd5cb7ab750543c}{00019}}\ \textcolor{keyword}{static}\ Terminal\ \mbox{\hyperlink{display_8c_ab48cb3ec5628ceae5cd5cb7ab750543c}{echoTerm}}\ \ \ =\ INVALID\_TERM;}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00021}\mbox{\hyperlink{display_8c_a24d8dffd81e1a6297ea372b718bb15cd}{00021}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8c_a24d8dffd81e1a6297ea372b718bb15cd}{clearStdout}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00022}00022\ \ \ \ clearTerm(\&\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00025}\mbox{\hyperlink{display_8c_ab5ba494b78d178684565f36d7948f8c3}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8c_ab5ba494b78d178684565f36d7948f8c3}{clearEchoTerm}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00026}00026\ \ \ \ clearTerm(\&\mbox{\hyperlink{display_8c_ab48cb3ec5628ceae5cd5cb7ab750543c}{echoTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00029}\mbox{\hyperlink{display_8c_a69f1d3d0f0a75e50b51aa067d231caeb}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8c_a69f1d3d0f0a75e50b51aa067d231caeb}{printStdout}}(\textcolor{keywordtype}{char}\ *m)\{}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00030}00030\ \ \ \ printTerm(m,\ \&\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00033}\mbox{\hyperlink{display_8c_a2b00342dede324282512c2d2b17f58b8}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8c_a2b00342dede324282512c2d2b17f58b8}{initDisplay}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00034}00034\ \ \ \ GUI\_init(DEFAULT\_BRIGHTNESS);\ \ \ \textcolor{comment}{//\ Initialisierung\ des\ LCD\ Boards\ mit\ Touch}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00035}00035\ \ \ \ TP\_Init(\textcolor{keyword}{false});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialisierung\ des\ LCD\ Boards\ mit\ Touch}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00036}00036\ \ \ \ \ Terminal\ term\ =\ makeKeyPad();}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00037}00037\ \ \ \ \textcolor{comment}{//\ Replace\ terminal\ by\ two\ terminals.\ One\ for\ standard\ output\ and}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00038}00038\ \ \ \ \textcolor{comment}{//\ one\ to\ echo\ entered\ digits.\ \ \ }}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00039}00039\ \ \ \ Coordinate\ c\ =\ term.bottomRight;}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00040}00040\ \ \ \ c.y\ =\ c.y\ -\/\ term.font-\/>Height\ -\/\ 1;\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00041}00041\ \ \ \ \mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}}\ =\ genTerm(term.topLeft,\ c,\ term.bgColor,\ term.fgColor,\ term.font);}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00042}00042\ \ \ \ c\ =\ term.topLeft;}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00043}00043\ \ \ \ c.y\ =\ term.bottomRight.y\ -\/\ term.font-\/>Height;}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00044}00044\ \ \ \ \mbox{\hyperlink{display_8c_ab48cb3ec5628ceae5cd5cb7ab750543c}{echoTerm}}\ =\ genTerm(c,\ term.bottomRight,\ BLUE,\ YELLOW,\ term.font);\ \ \ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00045}00045\ \ \ \ \mbox{\hyperlink{display_8c_ab5ba494b78d178684565f36d7948f8c3}{clearEchoTerm}}();}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00046}00046\ \ \ \ \mbox{\hyperlink{display_8c_a24d8dffd81e1a6297ea372b718bb15cd}{clearStdout}}();}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00049}\mbox{\hyperlink{display_8c_acb9d00d18da3afe92a0c55f5b35ce52a}{00049}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8c_acb9d00d18da3afe92a0c55f5b35ce52a}{printToEchoLine}}(\textcolor{keywordtype}{char}\ c)\{}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00050}00050\ \ \ \ \textcolor{keywordtype}{char}\ buf[2]\ =\ \{\textcolor{charliteral}{'\(\backslash\)0'},\ \textcolor{charliteral}{'\(\backslash\)0'}\};}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00051}00051\ \ \ \ buf[0]\ =\ c;}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00052}00052\ \ \ \ printTerm(buf,\ \&\mbox{\hyperlink{display_8c_ab48cb3ec5628ceae5cd5cb7ab750543c}{echoTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00055}\mbox{\hyperlink{display_8c_a5dd355818a51f3a802cef75b3d0a99dd}{00055}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8c_a5dd355818a51f3a802cef75b3d0a99dd}{setErrMode}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00056}00056\ \ \ \ \ clearTerm(\&\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00057}00057\ \ \ \ \ setTextColorTerm(RED,\ \&\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00060}\mbox{\hyperlink{display_8c_aa977481486a9816d8ab1ce12a9a68034}{00060}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{display_8c_aa977481486a9816d8ab1ce12a9a68034}{setNormalMode}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00061}00061\ \ \ \ \ clearTerm(\&\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00062}00062\ \ \ \ \ setTextColorTerm(BLACK,\ \&\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00065}\mbox{\hyperlink{display_8c_a95002ad53098168472dcaaf34d2f01f9}{00065}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{display_8c_a95002ad53098168472dcaaf34d2f01f9}{isBottomLine}}(\textcolor{keywordtype}{void})\ \{}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00066}00066\ \ \ \ \ \ \textcolor{keywordflow}{return}\ getCurRow(\&\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}})\ +\ 1\ ==\ getNoOfRows(\&\mbox{\hyperlink{display_8c_ae673f916ab186ce37b6c7ad2a16b524c}{stdoutTerm}});}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{display_8c_source_l00069}00069\ \textcolor{comment}{//\ EOF}}
+
+\end{DoxyCode}

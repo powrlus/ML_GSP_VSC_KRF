@@ -1,0 +1,98 @@
+\doxysection{Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{Src/main.c@{Src/main.c}}
+
+
+Main program body and control module of RPN calculator. Modules are structured according to MVC (model view control) design. This solution bases on the RPN calculatr for the old TI Board.  
+
+
+{\ttfamily \#include "{}init.\+h"{}}\newline
+{\ttfamily \#include "{}scanner.\+h"{}}\newline
+{\ttfamily \#include "{}display.\+h"{}}\newline
+{\ttfamily \#include "{}arith\+\_\+lib.\+h"{}}\newline
+{\ttfamily \#include "{}int\+\_\+stack.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{main_8c_af1e7fae2fbc8bb12b9ed2bf8ba817aa0}{clear\+System}} (void)
+\item 
+static void \mbox{\hyperlink{main_8c_a5b7a8dec51037ee85d5995ab8e44abc6}{err\+Handler}} (char \texorpdfstring{$\ast$}{*}msg)
+\item 
+static void \mbox{\hyperlink{main_8c_a0405bd2282f4db136f917a885cbc1c66}{handle\+Token}} (void)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main program body and control module of RPN calculator. Modules are structured according to MVC (model view control) design. This solution bases on the RPN calculatr for the old TI Board. 
+
+\begin{DoxyAuthor}{Author}
+Franz Korf HAW-\/\+Hamburg 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V0.\+5 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/08-\/17 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{main_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_af1e7fae2fbc8bb12b9ed2bf8ba817aa0}\index{main.c@{main.c}!clearSystem@{clearSystem}}
+\index{clearSystem@{clearSystem}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{clearSystem()}{clearSystem()}}
+{\footnotesize\ttfamily \label{main_8c_af1e7fae2fbc8bb12b9ed2bf8ba817aa0} 
+void clear\+System (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00019}{19}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00024}{err\+Handler()}}, and \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}.
+
+\Hypertarget{main_8c_a5b7a8dec51037ee85d5995ab8e44abc6}\index{main.c@{main.c}!errHandler@{errHandler}}
+\index{errHandler@{errHandler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{errHandler()}{errHandler()}}
+{\footnotesize\ttfamily \label{main_8c_a5b7a8dec51037ee85d5995ab8e44abc6} 
+void err\+Handler (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00024}{24}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00044}{handle\+Token()}}, and \mbox{\hyperlink{main_8c_source_l00114}{main()}}.
+
+\Hypertarget{main_8c_a0405bd2282f4db136f917a885cbc1c66}\index{main.c@{main.c}!handleToken@{handleToken}}
+\index{handleToken@{handleToken}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{handleToken()}{handleToken()}}
+{\footnotesize\ttfamily \label{main_8c_a0405bd2282f4db136f917a885cbc1c66} 
+void handle\+Token (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00044}{44}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8c_source_l00114}{main()}}.
+
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00114}{114}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
