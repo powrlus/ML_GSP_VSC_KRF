@@ -117,8 +117,9 @@
   "cmake.ignoreCMakeListsMissing": true,
   "C_Cpp_Runner.msvcBatchPath": "",
   "clangd.arguments": [
-    "--compile-commands-dir=c:\\Users\\sawil\\Uni_Programme\\Repositorys\\ML_GSP_VSC_KRF\\Programs\\KL1_SW_Entprellen\\out\\KL1_SW_Entprellen\\ITSboard\\Debug"
+    "--compile-commands-dir=/Users/franz/GIT_HUB/ML_GSP_VSC_KRF/Programs/DrehgeberInterrupt/out/DrehgeberInterrupt/ITSboard/Release"
   ],
   "debug.hideSlowPreLaunchWarning": true,
+  "debug.showInStatusBar": "never",
   "debug.showInStatusBar": "never"
 }

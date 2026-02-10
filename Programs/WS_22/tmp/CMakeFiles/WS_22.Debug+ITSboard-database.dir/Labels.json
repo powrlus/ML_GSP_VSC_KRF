@@ -1,0 +1,37 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard-database"
+		},
+		{
+			"file" : "C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard-database.rule"
+		},
+		{
+			"file" : "C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-database.rule"
+		},
+		{
+			"file" : "C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-configure.rule"
+		},
+		{
+			"file" : "C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-patch.rule"
+		},
+		{
+			"file" : "C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-update.rule"
+		},
+		{
+			"file" : "C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-download.rule"
+		},
+		{
+			"file" : "C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-mkdir.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"WS_22.Debug+ITSboard"
+		],
+		"name" : "WS_22.Debug+ITSboard-database"
+	}
+}

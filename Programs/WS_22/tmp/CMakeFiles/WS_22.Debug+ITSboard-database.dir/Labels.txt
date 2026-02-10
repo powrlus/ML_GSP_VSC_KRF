@@ -1,0 +1,11 @@
+# Target labels
+ WS_22.Debug+ITSboard
+# Source files and their labels
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard-database
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/CMakeFiles/WS_22.Debug+ITSboard-database.rule
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-database.rule
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-configure.rule
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-patch.rule
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-update.rule
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-download.rule
+C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_22/tmp/WS_22.Debug+ITSboard/src/WS_22.Debug+ITSboard-stamp/WS_22.Debug+ITSboard-mkdir.rule

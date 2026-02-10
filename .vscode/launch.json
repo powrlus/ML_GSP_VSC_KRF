@@ -1,15 +1,13 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "STLink@pyOCD (launch)",
             "type": "gdbtarget",
             "request": "launch",
-            "cwd": "${workspaceFolder}/Programs/KL1_SW_Entprellen",
-            "program": "out/KL1_SW_Entprellen/ITSboard/Debug/KL1_SW_Entprellen.axf",
             "cwd": "${workspaceFolder}/Programs/DrehgeberInterrupt",
             "program": "out/DrehgeberInterrupt/ITSboard/Release/DrehgeberInterrupt.axf",
+            "gdb": "arm-none-eabi-gdb",
             "preLaunchTask": "CMSIS Load",
             "initCommands": [
                 "monitor reset halt",
@@ -17,8 +15,6 @@
             ],
             "customResetCommands": [
                 "monitor reset halt",
-                "maintenance flush register-cache",
-                "maintenance flush dcache",
                 "tbreak main",
                 "continue"
             ],
@@ -41,25 +37,20 @@
             "cmsis": {
                 "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
                 "updateConfiguration": "auto"
-            },
-            "auxiliaryGdb": true,
-            "gdb": "arm-none-eabi-gdb"
+            }
         },
         {
             "name": "STLink@pyOCD (attach)",
             "type": "gdbtarget",
             "request": "attach",
-            "cwd": "${workspaceFolder}/Programs/KL1_SW_Entprellen",
-            "program": "out/KL1_SW_Entprellen/ITSboard/Debug/KL1_SW_Entprellen.axf",
-            "cwd": "${workspaceFolder}/Programs/DrehgeberInterrupt",
-            "program": "out/DrehgeberInterrupt/ITSboard/Release/DrehgeberInterrupt.axf",
+            "cwd": "${workspaceFolder}/Programs/WS_24",
+            "program": "out/WS_24/ITSboard/Debug/WS_24.axf",
+            "gdb": "arm-none-eabi-gdb",
             "initCommands": [
                 ""
             ],
             "customResetCommands": [
                 "monitor reset halt",
-                "maintenance flush register-cache",
-                "maintenance flush dcache",
                 "tbreak main",
                 "continue"
             ],
@@ -69,9 +60,7 @@
             "cmsis": {
                 "cbuildRunFile": "${command:cmsis-csolution.getCbuildRunFile}",
                 "updateConfiguration": "auto"
-            },
-            "auxiliaryGdb": true,
-            "gdb": "arm-none-eabi-gdb"
+            }
         }
     ]
 }

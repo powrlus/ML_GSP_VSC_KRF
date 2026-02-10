@@ -1,0 +1,22 @@
+build-idx:
+  generated-by: csolution version 2.12.0+p48-gd3223e31
+  cdefault: ${CMSIS_COMPILER_ROOT}/cdefault.yml
+  csolution: WS_24.csolution.yml
+  cbuild-run: out/WS_24+ITSboard.cbuild-run.yml
+  tmpdir: tmp
+  cprojects:
+    - cproject: WS_24.cproject.yml
+  cbuilds:
+    - cbuild: out/WS_24/ITSboard/Debug/WS_24.Debug+ITSboard.cbuild.yml
+      project: WS_24
+      configuration: .Debug+ITSboard
+      messages:
+        warnings:
+          - file 'C:/Users/sawil/Uni_Programme/Repositorys/ML_GSP_VSC_KRF/Programs/WS_24/.cmsis/WS_24+ITSboard.dbgconf' not found; use --update-rte
+        info:
+          - WS_24.cbuild-pack.yml - file is already up-to-date
+          - WS_24+ITSboard.cbuild-run.yml - file is already up-to-date
+          - WS_24.Debug+ITSboard.cbuild.yml - file is already up-to-date
+      packs-unused:
+        - pack: ARM::CMSIS-DSP@1.16.2
+        - pack: ARM::CMSIS-NN@6.0.0
