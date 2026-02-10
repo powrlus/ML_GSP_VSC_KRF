@@ -7,7 +7,8 @@
 
 #define PORT_SIZE 16
 #define READING_ATTEMPTS 10
-#define MAX_PRELLZEIT_US 500
+#define MAX_PRELLZEIT_US 20 * US_PER_MS
+#define US_PER_MS 1000
     /*********************************************
     * @brief   Function that reads the value of one gpio pin
     *
